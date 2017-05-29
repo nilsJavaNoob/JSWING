@@ -11,7 +11,7 @@ public class Wind1 extends JFrame {
         setVisible(true);
         setSize(500,300);
         setLocationRelativeTo(null);
-        setTitle("Sub's Game");
+        setTitle("Sub's2 Game");
 
 
         JMenuBar jMenuBar = new JMenuBar();//place for menus
