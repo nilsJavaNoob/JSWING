@@ -1,15 +1,15 @@
 package basics;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * Created by n on 26.05.17.
  */
-public class Wind1 extends JFrame {
-    public Wind1(){
+public class Wind2 extends JFrame {
+    public Wind2(){
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         setSize(500,300);
@@ -56,8 +56,14 @@ public class Wind1 extends JFrame {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvocationTargetException, InterruptedException {
         //Main main = new Main();
-         new Wind1();
+         //new Wind2(); работать будет, он не правильный запуск
+        SwingUtilities.invokeAndWait(new Runnable() {
+            @Override
+            public void run() {
+                new Wind2();
+            }
+        });
     }
 }
